@@ -222,10 +222,10 @@ textarea {
 }
 
 .badge {
-  font-size: 0.5rem;
+  font-size: 1rem;
   padding: 0.25rem 1rem;
   color: var(--color-white);
-  border-radius: 2rem;
+  border-radius: 0.3rem;
   align-self: flex-start;
 }
 
