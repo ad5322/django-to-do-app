@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>My Todo List</h2>
+{% if tasks %}
+    <ul>
+        {% for task in tasks  %}
+            <li>
+                <a href="#" class=" {% if task.completed %} completed {%endif%} ">{{task.title}}</a>
+            </li>
+        
+        
+        
+        
+        {% endfor %}
+        {% else %}
+        <p> you have no pendings</p>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+{% endif %}
+
+</ul>
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+
