@@ -51,6 +51,7 @@ textarea:focus {
 }
 body {
   font-family: 'Dosis', sans-serif;
+  
   font-size: 1rem;
   line-height: 1.7;
   display: flex;

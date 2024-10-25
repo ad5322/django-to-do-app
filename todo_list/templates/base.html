@@ -5,14 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static "css/style.css" %} ">
-    <link rel="stylesheet" href="{% static "css/mystyle.css" %} ">
+    <link rel="stylesheet" href="{% static "css/mystyle.css" %} "> 
+    {% comment %} {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %} {% endcomment %}
     <title>Todo List</title>
 </head>
 <body>
-  
     
     
-    <header class="header">
+    
+    <header class="header ">
 
         <div class="container">
 
