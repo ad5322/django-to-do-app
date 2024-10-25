@@ -2,7 +2,22 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .models import Task
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from django.contrib import messages
 
+
+class TaskCreate(CreateView):
+    model = Task
+    fields = ['title','description','completed']
+    success_url = reverse_lazy('tasks')
+    
+    def form_valid(self,form):
+        form.instance.user = self.request.user
+        messages.success(self.request, 'the task created successfully')
+        return super(TaskCreate,self).form_valid(form)
+    
+    
 
 def home(request):
     return render(request,'home.html')
